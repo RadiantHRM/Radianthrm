@@ -1,0 +1,9 @@
+{
+  "name": "Radiant HRM",
+  "description": "Global Career Architects. Forensic career architecting for high-authority executive placements.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}
