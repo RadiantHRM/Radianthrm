@@ -10,7 +10,7 @@ const Policy: React.FC = () => {
     {
       title: "Data Sovereignty",
       icon: <Database className="text-blue-600" />,
-      content: "At Radiant HRM, we treat your professional data as a sovereign asset. We do not sell, trade, or lease your personal information to third parties. Your data is used exclusively to architect your career strategy."
+      content: "At Hireable Co., we treat your professional data as a sovereign asset. We do not sell, trade, or lease your personal information to third parties. Your data is used exclusively to architect your career strategy."
     },
     {
       title: "Forensic Security",

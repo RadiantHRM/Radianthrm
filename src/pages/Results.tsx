@@ -62,47 +62,51 @@ const Results: React.FC = () => {
       </section>
 
       {/* Metrics Grid */}
-      <section className="py-24 md:py-40 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <section className="py-16 md:py-32 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
            {metrics.map((m, i) => (
-             <div key={i} className="bg-slate-50 p-12 rounded-[3.5rem] border border-slate-100 hover:bg-white hover:shadow-2xl hover:-translate-y-4 transition-all duration-700 group">
-                <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center mb-10 shadow-sm group-hover:scale-110 transition-transform">
+             <div key={i} className="bg-slate-50 p-8 sm:p-10 rounded-3xl md:rounded-[2.5rem] border border-slate-100 hover:bg-white hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 group flex flex-col justify-between">
+                <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center mb-8 shadow-sm group-hover:scale-110 transition-transform">
                    {m.icon}
                 </div>
-                <div className="text-5xl md:text-7xl font-black text-slate-900 mb-4 tracking-tighter">{m.value}</div>
-                <div className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400">{m.label}</div>
+                <div>
+                  <div className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 mb-3 tracking-tighter">{m.value}</div>
+                  <div className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400">{m.label}</div>
+                </div>
              </div>
            ))}
         </div>
       </section>
 
       {/* Case Studies */}
-      <section className="py-24 md:py-40 bg-slate-50">
+      <section className="py-20 md:py-36 bg-slate-50">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-10">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 md:mb-20 gap-8">
                <div className="max-w-2xl">
-                  <h2 className="text-4xl md:text-7xl font-black text-slate-900 tracking-tighter mb-8">Strategic Victories.</h2>
-                  <p className="text-slate-500 text-xl md:text-2xl font-medium">Real-world deconstructions of high-stakes career transitions.</p>
+                  <h2 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter mb-4">Strategic Victories.</h2>
+                  <p className="text-slate-500 text-lg md:text-xl font-medium">Real-world deconstructions of high-stakes career transitions.</p>
                </div>
-               <button onClick={() => sounds.play('click')} className="flex items-center space-x-3 text-blue-600 font-black uppercase tracking-widest text-sm hover:translate-x-2 transition-transform">
+               <button onClick={() => sounds.play('click')} className="flex items-center space-x-3 text-blue-600 font-black uppercase tracking-widest text-xs hover:translate-x-2 transition-transform">
                   <span>View All Case Studies</span>
-                  <ArrowRight size={20} />
+                  <ArrowRight size={18} />
                </button>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-10">
                {caseStudies.map((cs, i) => (
-                 <div key={i} className="bg-white rounded-[4rem] p-12 md:p-16 border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-700 group">
-                    <div className="inline-flex items-center space-x-2 bg-blue-50 text-blue-600 px-4 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest mb-10">
-                       <Zap size={14} />
-                       <span>{cs.impact}</span>
+                 <div key={i} className="bg-white rounded-3xl md:rounded-[2.5rem] p-8 sm:p-10 md:p-12 border border-slate-100 shadow-sm hover:shadow-2xl transition-all duration-500 group flex flex-col justify-between">
+                    <div>
+                      <div className="inline-flex items-center space-x-2 bg-blue-50 text-blue-700 border border-blue-100 px-3.5 py-1.5 rounded-full text-[10px] font-black uppercase tracking-widest mb-6">
+                         <Zap size={14} className="text-blue-600" />
+                         <span>{cs.impact}</span>
+                      </div>
+                      <h3 className="text-2xl md:text-3xl font-black text-slate-900 mb-2 tracking-tight group-hover:text-blue-600 transition-colors">{cs.title}</h3>
+                      <div className="text-slate-400 font-black text-xs uppercase tracking-widest mb-6">{cs.role}</div>
+                      <p className="text-slate-600 text-base md:text-lg font-medium leading-relaxed mb-8">{cs.desc}</p>
                     </div>
-                    <h3 className="text-3xl md:text-4xl font-black text-slate-900 mb-4 tracking-tight group-hover:text-blue-600 transition-colors">{cs.title}</h3>
-                    <div className="text-slate-400 font-black text-xs uppercase tracking-widest mb-10">{cs.role}</div>
-                    <p className="text-slate-500 text-lg md:text-xl font-medium leading-relaxed mb-12">{cs.desc}</p>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 pt-4 border-t border-slate-100">
                        {cs.tags.map((tag, ti) => (
-                         <span key={ti} className="text-[9px] font-bold text-slate-400 uppercase tracking-widest bg-slate-50 px-3 py-1 rounded-full border border-slate-100">{tag}</span>
+                         <span key={ti} className="text-[10px] font-bold text-slate-500 uppercase tracking-wider bg-slate-50 px-3 py-1 rounded-full border border-slate-200/60">{tag}</span>
                        ))}
                     </div>
                  </div>
@@ -112,14 +116,14 @@ const Results: React.FC = () => {
       </section>
 
       {/* Testimonial Quote */}
-      <section className="py-24 md:py-48 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-         <Sparkles size={64} className="mx-auto text-blue-600 mb-16 animate-pulse" />
-         <blockquote className="text-3xl md:text-6xl font-black text-slate-900 leading-[1.1] tracking-tight mb-16">
-            "Radiant HRM didn't just help me find a job; they helped me realize my <span className="text-blue-600">true market value</span> and architected a narrative that commanded it."
+      <section className="py-20 md:py-36 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+         <Sparkles size={56} className="mx-auto text-blue-600 mb-12 animate-pulse" />
+         <blockquote className="text-2xl sm:text-4xl md:text-5xl font-black text-slate-900 leading-[1.2] tracking-tight mb-12">
+            "Hireable Co. didn't just help me find a job; they helped me realize my <span className="text-blue-600">true market value</span> and architected a narrative that commanded it."
          </blockquote>
          <div className="flex flex-col items-center">
-            <img src="https://picsum.photos/seed/exec1/150/150" alt="Executive" className="w-24 h-24 rounded-full border-4 border-slate-100 shadow-xl mb-6" />
-            <div className="font-black text-2xl text-slate-900">Sarah Jenkins</div>
+            <img src="https://picsum.photos/seed/exec1/150/150" alt="Executive" className="w-20 h-20 rounded-full border-4 border-slate-100 shadow-xl mb-4" />
+            <div className="font-black text-xl text-slate-900">Sarah Jenkins</div>
             <div className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 mt-1">Chief Technology Officer, Global SaaS</div>
          </div>
       </section>

@@ -93,7 +93,7 @@ const Contact: React.FC = () => {
 
     // Stage 3: Handshake
     setDeliveryStep('handshake');
-    addLog("Handshake protocol initiated with Radianthrm HQ...");
+    addLog("Handshake protocol initiated with Hireable Co. HQ...");
     await new Promise(r => setTimeout(r, 900));
     addLog("Briefing validated and signed.");
     await new Promise(r => setTimeout(r, 500));
@@ -143,7 +143,7 @@ const Contact: React.FC = () => {
                 { 
                   icon: <Database size={24} />, 
                   title: 'Secure Asset Storage', 
-                  val: 'Radianthrm Collective', 
+                  val: 'Hireable Co. Vault', 
                   link: '#',
                   color: 'bg-slate-100 text-slate-900'
                 }

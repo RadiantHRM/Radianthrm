@@ -28,39 +28,39 @@ const Founder: React.FC = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full text-center">
            <div className="inline-flex items-center space-x-3 bg-blue-500/10 border border-blue-500/20 px-5 py-2 rounded-full text-blue-600 text-xs font-black uppercase tracking-[0.3em] mb-12 animate-in fade-in slide-in-from-top-4 duration-700">
              <Sparkles size={14} className="animate-pulse" />
-             <span>Founding Partners</span>
+             <span>The Founder</span>
           </div>
           <h1 className="text-6xl sm:text-8xl md:text-[8rem] font-black text-slate-950 leading-[0.85] tracking-tighter mb-6 animate-in fade-in slide-in-from-bottom-8 duration-1000">
              Meet the <br />
-             <span className="text-blue-600">Architects.</span>
+             <span className="text-blue-600">Architect.</span>
           </h1>
           <p className="text-xl md:text-2xl text-slate-400 font-medium italic animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-200">
-             Not just a service. The strategic partners you've been looking for.
+             Not just a service. The strategic career architect behind high-authority executive placements.
           </p>
         </div>
       </section>
 
-      {/* Team Section - Alternating Layout */}
-      <section className="py-24 md:py-48 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-32 md:space-y-64">
+      {/* Founder Profile Section */}
+      <section className="py-20 md:py-36 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          {/* Isaac Ademola - Image Left, Text Right */}
-          <div className="flex flex-col lg:flex-row items-center gap-16 md:gap-32">
-            <div className="w-full lg:w-1/2 relative group">
+          {/* Isaac Ademola */}
+          <div className="flex flex-col lg:flex-row items-center gap-16 md:gap-24">
+            <div className="w-full lg:w-5/12 relative group">
               <div className="absolute -inset-4 bg-blue-600/10 rounded-[3rem] -rotate-2 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-              <div className="relative overflow-hidden rounded-[2.5rem] shadow-2xl border-8 border-white aspect-[4/5] md:aspect-[3/4]">
+              <div className="relative overflow-hidden rounded-[2.5rem] shadow-2xl border-8 border-white aspect-[4/5]">
                 <img 
                   src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1200" 
                   alt="Isaac Ademola" 
-                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 group-hover:scale-110"
+                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
                 />
               </div>
             </div>
-            <div className="w-full lg:w-1/2 space-y-8">
+            <div className="w-full lg:w-7/12 space-y-8">
               <div>
                 <h2 className="text-5xl md:text-7xl font-black text-slate-950 tracking-tighter mb-2">Isaac Ademola</h2>
-                <div className="text-slate-400 text-lg md:text-xl font-medium italic mb-4">10+ years executive search veteran. Strategic placement specialist.</div>
-                <div className="text-blue-600 text-sm font-black uppercase tracking-[0.4em]">Founder & Chief Architect</div>
+                <div className="text-slate-400 text-lg md:text-xl font-medium italic mb-3">10+ years executive search veteran. Strategic placement specialist.</div>
+                <div className="text-blue-600 text-xs md:text-sm font-black uppercase tracking-[0.4em]">Founder & Chief Architect</div>
               </div>
               <div className="space-y-6 text-slate-600 text-lg md:text-xl leading-relaxed font-medium">
                 <p>
@@ -70,48 +70,13 @@ const Founder: React.FC = () => {
                   This experience, plus strategic insights I've shared as a thought-leader for over a decade, shows that success isn't just about pretty resumes; it's about solving real business problems through smart positioning.
                 </p>
                 <p>
-                  I started Radiant HRM to help leaders turn their professional identity into a growth engine instead of just a cost. Having been a founder myself, I tackle every project with both a designer's eye and a focus on the numbers that grow your career.
+                  I started Hireable Co. to help leaders turn their professional identity into a growth engine instead of just a cost. Having been a founder myself, I tackle every project with both a designer's eye and a focus on the numbers that grow your career.
                 </p>
               </div>
-              <div className="flex items-center space-x-4 pt-8">
-                <a href="#" className="p-4 bg-slate-950 text-white rounded-2xl hover:bg-blue-600 transition-all shadow-lg"><Linkedin size={24} /></a>
-                <a href="#" className="p-4 bg-slate-100 text-slate-600 rounded-2xl hover:bg-slate-200 transition-all"><Twitter size={24} /></a>
-              </div>
-            </div>
-          </div>
-
-          {/* Fawaz Olayinka Musbaudeen - Text Left, Image Right */}
-          <div className="flex flex-col lg:flex-row items-center gap-16 md:gap-32">
-            <div className="w-full lg:w-1/2 space-y-8 order-2 lg:order-1">
-              <div>
-                <h2 className="text-5xl md:text-7xl font-black text-slate-950 tracking-tighter mb-2">Fawaz Olayinka Musbaudeen</h2>
-                <div className="text-slate-400 text-lg md:text-xl font-medium italic mb-4">Strategic lead. Global market dynamics expert.</div>
-                <div className="text-blue-600 text-sm font-black uppercase tracking-[0.4em]">Co-Founder & Strategic Lead</div>
-              </div>
-              <div className="space-y-6 text-slate-600 text-lg md:text-xl leading-relaxed font-medium">
-                <p>
-                  With over a decade creating digital experiences for both Fortune 500 companies and high-growth startups, I've mastered building systems that scale well while driving user adoption.
-                </p>
-                <p>
-                  My work has powered products at global leaders, where my strategic systems got 100% stakeholder buy-in before coding even started. I specialize in deconstructing complex professional identities and rebuilding them for maximum impact.
-                </p>
-                <p>
-                  What makes me different is my ability to bridge strategy and development. For executive leaders, this means I create narratives that not only convert recruiters but can be easily backed by your performance data, helping you scale faster.
-                </p>
-              </div>
-              <div className="flex items-center space-x-4 pt-8">
-                <a href="mailto:Yinka@radianthrm.com" className="p-4 bg-slate-950 text-white rounded-2xl hover:bg-blue-600 transition-all shadow-lg"><Mail size={24} /></a>
+              <div className="flex items-center space-x-4 pt-6">
+                <a href="mailto:hello@hireableco.com" className="p-4 bg-slate-950 text-white rounded-2xl hover:bg-blue-600 transition-all shadow-lg"><Mail size={24} /></a>
                 <a href="#" className="p-4 bg-slate-100 text-slate-600 rounded-2xl hover:bg-slate-200 transition-all"><Linkedin size={24} /></a>
-              </div>
-            </div>
-            <div className="w-full lg:w-1/2 relative group order-1 lg:order-2">
-              <div className="absolute -inset-4 bg-blue-600/10 rounded-[3rem] rotate-2 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-              <div className="relative overflow-hidden rounded-[2.5rem] shadow-2xl border-8 border-white aspect-[4/5] md:aspect-[3/4]">
-                <img 
-                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1200" 
-                  alt="Fawaz Olayinka Musbaudeen" 
-                  className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 group-hover:scale-110"
-                />
+                <a href="#" className="p-4 bg-slate-100 text-slate-600 rounded-2xl hover:bg-slate-200 transition-all"><Twitter size={24} /></a>
               </div>
             </div>
           </div>
@@ -141,7 +106,7 @@ const Founder: React.FC = () => {
                      For over a decade, I've watched brilliant professionals stall in their careers not because of a lack of talent, but because of a lack of strategic positioning. The market doesn't reward hard work in isolation; it rewards the perception of high-value impact.
                   </p>
                   <p>
-                     Radiant HRM was born from a single realization: the tools used by elite executive search firms could be democratized for the individual. We apply forensic analysis to every touchpoint of your professional identity.
+                     Hireable Co. was born from a single realization: the tools used by elite executive search firms could be democratized for the individual. We apply forensic analysis to every touchpoint of your professional identity.
                   </p>
                </div>
 
@@ -170,7 +135,7 @@ const Founder: React.FC = () => {
       <section className="py-24 md:py-48 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
          <div className="text-center mb-32">
             <h2 className="text-4xl md:text-7xl font-black text-slate-900 tracking-tighter mb-8">Core Philosophies.</h2>
-            <p className="text-slate-500 text-xl md:text-2xl font-medium max-w-3xl mx-auto">The foundational principles that drive every strategic engagement at Radiant HRM.</p>
+            <p className="text-slate-500 text-xl md:text-2xl font-medium max-w-3xl mx-auto">The foundational principles that drive every strategic engagement at Hireable Co.</p>
          </div>
 
          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">

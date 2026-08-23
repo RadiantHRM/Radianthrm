@@ -72,36 +72,38 @@ const ResumeServices: React.FC = () => {
       </section>
 
       {/* Tiers Section */}
-      <section className="py-24 md:py-48 bg-slate-50">
+      <section className="py-20 md:py-36 bg-slate-50">
          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-32">
-               <h2 className="text-4xl md:text-7xl font-black text-slate-900 tracking-tighter mb-8">Service Tiers.</h2>
-               <p className="text-slate-500 text-xl md:text-2xl font-medium max-w-3xl mx-auto">Select the level of strategic engagement required for your career objective.</p>
+            <div className="text-center mb-20 md:mb-28">
+               <h2 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tighter mb-4">Service Tiers.</h2>
+               <p className="text-slate-500 text-lg md:text-xl font-medium max-w-3xl mx-auto">Select the level of strategic engagement required for your career objective.</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 items-stretch">
                {[
                  { title: "Strategic", price: "$499", features: ["Forensic Audit", "ATS Optimization", "1-on-1 Consultation"] },
                  { title: "Executive", price: "$999", features: ["Full Dossier Rebuild", "LinkedIn Optimization", "Priority Support"], popular: true },
                  { title: "Elite", price: "$1,999", features: ["Board-Level Strategy", "Market Intelligence", "Unlimited Revisions"] }
                ].map((tier, i) => (
-                 <div key={i} className={`bg-white p-12 md:p-16 rounded-[4rem] border transition-all duration-700 flex flex-col ${tier.popular ? 'border-blue-600 shadow-2xl shadow-blue-100 scale-105 relative' : 'border-slate-100 shadow-sm hover:shadow-xl'}`}>
-                    {tier.popular && (
-                      <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-blue-600 text-white px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-widest">
-                         Most Strategic
-                      </div>
-                    )}
-                    <h3 className="text-3xl font-black text-slate-900 mb-4 tracking-tight">{tier.title}</h3>
-                    <div className="text-5xl font-black text-blue-600 mb-10 tracking-tighter">{tier.price}</div>
-                    <ul className="space-y-6 mb-12 flex-grow">
-                       {tier.features.map((f, fi) => (
-                         <li key={fi} className="flex items-center space-x-3 text-slate-500 font-medium">
-                            <Zap size={16} className="text-blue-600" />
-                            <span>{f}</span>
-                         </li>
-                       ))}
-                    </ul>
-                    <button onClick={() => { window.location.href = '#/contact'; sounds.play('click'); }} className={`w-full py-5 rounded-2xl font-black text-lg transition-all active:scale-95 ${tier.popular ? 'bg-blue-600 text-white shadow-xl shadow-blue-200 hover:bg-blue-700' : 'bg-slate-950 text-white hover:bg-black'}`}>
+                 <div key={i} className={`bg-white p-8 sm:p-10 md:p-12 rounded-3xl md:rounded-[2.5rem] border transition-all duration-500 flex flex-col justify-between ${tier.popular ? 'border-blue-600 shadow-2xl shadow-blue-100 md:-translate-y-2 relative' : 'border-slate-100 shadow-sm hover:shadow-xl'}`}>
+                    <div>
+                      {tier.popular && (
+                        <div className="inline-block bg-blue-600 text-white px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest mb-6">
+                           Most Strategic
+                        </div>
+                      )}
+                      <h3 className="text-2xl md:text-3xl font-black text-slate-900 mb-2 tracking-tight">{tier.title}</h3>
+                      <div className="text-4xl md:text-5xl font-black text-blue-600 mb-8 tracking-tighter">{tier.price}</div>
+                      <ul className="space-y-4 mb-8">
+                         {tier.features.map((f, fi) => (
+                           <li key={fi} className="flex items-center space-x-3 text-slate-600 font-medium text-sm md:text-base">
+                              <Zap size={16} className="text-blue-600 flex-shrink-0" />
+                              <span>{f}</span>
+                           </li>
+                         ))}
+                      </ul>
+                    </div>
+                    <button onClick={() => { window.location.href = '#/contact'; sounds.play('click'); }} className={`w-full py-4.5 rounded-2xl font-black text-base md:text-lg transition-all active:scale-95 ${tier.popular ? 'bg-blue-600 text-white shadow-xl shadow-blue-200 hover:bg-blue-700' : 'bg-slate-950 text-white hover:bg-black'}`}>
                        Select Tier
                     </button>
                  </div>

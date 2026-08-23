@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { 
   ChevronRight, 
   ChevronLeft,
@@ -49,8 +49,8 @@ const Home: React.FC = () => {
   const faqs = [
     { q: "How does the VIP Reverse Recruiting service work?", a: "Our team acts as your dedicated career agents. We source hidden roles, handle the aggressive outbound applications, and network directly with decision-makers to land you interviews while you focus on your current role. We effectively become your outsourced job search department." },
     { q: "Are your resumes truly ATS-optimized?", a: "Yes. We use forensic keyword mapping and semantic intent analysis based on current FAANG-grade screening algorithms. Unlike basic 'stuffing', we align your achievements with the specific data points that internal hiring software is programmed to prioritize." },
-    { q: "What makes Radianthrm different from standard resume writers?", a: "Standard writers provide summaries; we provide business cases. We re-engineered your professional narrative to focus on impact quantification and high-authority positioning. We treat your career as a revenue-generating asset that needs a compelling ROI presentation." },
-    { q: "How do I securely transmit my current documents?", a: "You can use our 'Direct Briefing' portal on the Contact page. All documents are processed via an encrypted link and stored in an isolated registry accessible only by our founding partners." },
+    { q: "What makes Hireable Co. different from standard resume writers?", a: "Standard writers provide summaries; we provide business cases. We re-engineer your professional narrative to focus on impact quantification and high-authority positioning. We treat your career as a revenue-generating asset that needs a compelling ROI presentation." },
+    { q: "How do I securely transmit my current documents?", a: "You can use our 'Direct Briefing' portal on the Contact page. All documents are processed via an encrypted link and stored in an isolated registry accessible only by our founding architect." },
     { q: "Do you offer coaching for salary negotiation?", a: "Our Executive and VIP tiers include intensive negotiation sessions where we teach you the Anchor Protocol. This framework ensures you enter conversations with a pre-calculated market value that commands respect and maximizes total compensation packages." },
     { q: "What is the typical turnaround time?", a: "Our standard forensic audit is delivered within 24-48 hours. Full narrative re-engineering typically takes 5-7 business days to ensure the quality required for high-stakes executive placement." }
   ];
@@ -117,20 +117,22 @@ const Home: React.FC = () => {
       </section>
 
       {/* Corporate Ecosystem - Logo Cloud Marquee */}
-      <section className="py-20 border-b border-slate-100 overflow-hidden bg-slate-50/50">
-        <div className="max-w-7xl mx-auto px-4 mb-12">
+      <section className="py-14 border-b border-slate-100 overflow-hidden bg-slate-50/50">
+        <div className="max-w-7xl mx-auto px-4 mb-8">
           <p className="text-center text-[10px] md:text-xs font-black text-slate-400 uppercase tracking-[0.5em]">HELPING CLIENTS GET HIRED AT</p>
         </div>
         
-        <div className="relative flex overflow-x-hidden">
+        <div className="relative flex overflow-x-hidden w-full select-none">
           <motion.div 
-            className="flex items-center gap-12 md:gap-24 py-4 whitespace-nowrap opacity-30 grayscale hover:grayscale-0 transition-all duration-1000 hover:opacity-100"
+            className="flex items-center gap-12 md:gap-20 py-2 whitespace-nowrap opacity-40 hover:opacity-90 grayscale hover:grayscale-0 transition-opacity duration-500 w-max"
             animate={{ x: ["0%", "-50%"] }}
-            transition={{ 
-              ease: "linear", 
-              duration: 100, 
-              repeat: Infinity 
+            transition={{
+              ease: "linear",
+              duration: 35,
+              repeat: Infinity,
+              repeatType: "loop"
             }}
+            style={{ willChange: "transform" }}
           >
             {[
               "GOOGLE", "AMAZON", "MICROSOFT", "DELOITTE", "META", "APPLE", 
@@ -141,7 +143,7 @@ const Home: React.FC = () => {
               "GOLDMAN SACHS", "McKinsey", "NVIDIA", "TESLA", "SPOTIFY", "IBM", 
               "PWC", "ACCENTURE", "J.P. MORGAN", "MORGAN STANLEY", "SALESFORCE", "NETFLIX"
             ]).map((company, idx) => (
-              <span key={idx} className="text-2xl md:text-5xl font-black italic tracking-tighter inline-block">
+              <span key={idx} className="text-xl md:text-3xl font-black italic tracking-tighter inline-block text-slate-800">
                 {company}
               </span>
             ))}
@@ -158,7 +160,7 @@ const Home: React.FC = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {SERVICE_PILLARS.map((pillar, idx) => (
-              <div key={idx} className="bg-white p-12 rounded-[3rem] shadow-2xl shadow-slate-200/50 border border-slate-100 hover:shadow-blue-100 hover:-translate-y-3 transition-all duration-700 flex flex-col group">
+              <div key={idx} className="bg-white p-8 sm:p-10 md:p-12 rounded-3xl md:rounded-[2.5rem] shadow-xl shadow-slate-200/50 border border-slate-100 hover:shadow-blue-100 hover:-translate-y-3 transition-all duration-700 flex flex-col group">
                 <div className="w-16 h-16 bg-blue-50 rounded-2xl flex items-center justify-center mb-10 text-blue-600 transition-colors group-hover:bg-blue-600 group-hover:text-white">
                   {pillar.icon}
                 </div>
@@ -174,54 +176,77 @@ const Home: React.FC = () => {
       </section>
 
       {/* Impact Reports Carousel - Horizontal Marquee for Rhythm */}
-      <section className="py-24 md:py-40 bg-slate-50 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 mb-24 text-center">
-           <h2 className="text-4xl md:text-7xl font-black text-slate-950 mb-6 tracking-tighter">Impact Reports</h2>
-           <p className="text-slate-400 font-bold uppercase tracking-[0.3em] text-[10px] md:text-xs">MARKET DOMINANCE VERIFIED</p>
+      <section className="py-20 md:py-36 bg-slate-50 overflow-hidden relative">
+        <div className="max-w-7xl mx-auto px-4 mb-16 text-center">
+           <div className="inline-flex items-center space-x-2 bg-blue-600/10 border border-blue-500/20 px-4 py-1.5 rounded-full text-blue-700 text-[10px] md:text-xs font-black mb-4 tracking-widest uppercase">
+             <TrendingUp size={14} className="text-blue-600" />
+             <span>VERIFIED CLIENT IMPACT</span>
+           </div>
+           <h2 className="text-4xl md:text-6xl font-black text-slate-950 mb-4 tracking-tighter">Impact Reports</h2>
+           <p className="text-slate-500 font-medium text-sm md:text-base max-w-xl mx-auto">Real placement outcomes, compensation leaps, and executive trajectory shifts.</p>
         </div>
 
-        <div className="relative flex overflow-x-hidden">
+        {/* Smooth Framer-Motion Hardware-Accelerated Marquee */}
+        <div className="relative flex overflow-x-hidden w-full select-none py-4">
           <motion.div 
-            className="flex items-center gap-12 py-10"
+            className="flex items-stretch gap-6 md:gap-8 px-4 w-max"
             animate={{ x: ["0%", "-50%"] }}
-            transition={{ 
-              ease: "linear", 
-              duration: 120, 
-              repeat: Infinity 
+            transition={{
+              ease: "linear",
+              duration: 48,
+              repeat: Infinity,
+              repeatType: "loop"
             }}
+            style={{ willChange: "transform" }}
           >
             {[...TESTIMONIALS, ...TESTIMONIALS].map((t, idx) => (
               <div 
                 key={`${t.id}-${idx}`}
-                className="w-[400px] md:w-[600px] flex-shrink-0 bg-white p-10 md:p-16 rounded-[4rem] shadow-xl border border-slate-100 flex flex-col justify-between h-[450px] md:h-[500px]"
+                className="w-[310px] sm:w-[380px] md:w-[440px] flex-shrink-0 bg-white p-7 sm:p-8 rounded-3xl shadow-lg shadow-slate-200/60 border border-slate-200/80 hover:border-blue-300 hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
               >
-                 <div className="relative inline-block mb-10 w-fit">
-                    <div className="w-20 h-20 md:w-24 md:h-24 rounded-3xl overflow-hidden border-4 border-slate-50 shadow-md">
-                      <img src={t.image} alt={t.name} className="w-full h-full object-cover" />
-                    </div>
-                    <div className="absolute -bottom-2 -right-2 bg-blue-600 text-white p-1.5 rounded-xl shadow-xl border-2 border-white">
-                      <ShieldCheck size={16} />
-                    </div>
-                 </div>
-                 
-                 <div className="flex space-x-1 text-blue-600 mb-6">
-                    {[1, 2, 3, 4, 5].map(s => <Star key={s} size={14} fill="currentColor" />)}
+                 <div>
+                   {/* Top Header Row: Profile Avatar + Name/Role */}
+                   <div className="flex items-center space-x-3.5 mb-4">
+                     <div className="relative flex-shrink-0">
+                       <img 
+                         src={t.image} 
+                         alt={t.name} 
+                         className="w-12 h-12 md:w-14 md:h-14 rounded-2xl object-cover border-2 border-slate-100 shadow-sm" 
+                       />
+                       <div className="absolute -bottom-1 -right-1 bg-blue-600 text-white p-1 rounded-lg shadow-sm">
+                         <ShieldCheck size={12} />
+                       </div>
+                     </div>
+                     <div className="min-w-0 flex-1">
+                       <div className="text-base sm:text-lg font-black text-slate-900 leading-tight truncate">{t.name}</div>
+                       <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mt-0.5 truncate">{t.role}</div>
+                     </div>
+                   </div>
+
+                   {/* Dedicated Star Rating Row - Safely nested inside card with ample padding */}
+                   <div className="flex items-center space-x-1 text-amber-400 mb-4">
+                      {[1, 2, 3, 4, 5].map(s => <Star key={s} size={15} fill="currentColor" />)}
+                   </div>
+
+                   {/* Quote Text */}
+                   <p className="text-slate-700 text-sm sm:text-[15px] md:text-base font-normal leading-relaxed italic line-clamp-4">
+                     "{t.content}"
+                   </p>
                  </div>
 
-                 <p className="text-xl md:text-3xl font-black text-slate-900 italic leading-snug tracking-tight mb-8">
-                   "{t.content}"
-                 </p>
-
-                 <div className="mt-auto">
-                    <div className="text-lg font-black text-slate-900">{t.name}</div>
-                    <div className="text-[10px] font-black text-slate-400 uppercase tracking-widest mt-1">{t.role}</div>
-                    
-                    {t.salaryIncrease && (
-                      <div className="mt-6 inline-flex items-center text-blue-600 font-black text-xs uppercase tracking-widest">
-                        <TrendingUp size={14} className="mr-2" />
+                 {/* Bottom Footer */}
+                 <div className="mt-6 pt-5 border-t border-slate-100 flex items-center justify-between gap-2">
+                    {t.salaryIncrease ? (
+                      <div className="inline-flex items-center gap-1.5 bg-blue-50 text-blue-700 border border-blue-100 px-3 py-1.5 rounded-xl font-black text-xs tracking-tight">
+                        <TrendingUp size={14} className="text-blue-600 flex-shrink-0" />
                         <span>{t.salaryIncrease} Increase</span>
                       </div>
-                    )}
+                    ) : <div />}
+                    
+                    <div className="text-[10px] font-bold text-slate-400 uppercase tracking-wider flex items-center gap-1 flex-shrink-0">
+                      <CheckCircle2 size={12} className="text-emerald-500" />
+                      <span>Verified Result</span>
+                    </div>
                  </div>
               </div>
             ))}
@@ -278,31 +303,23 @@ const Home: React.FC = () => {
       <section className="py-24 md:py-40 bg-slate-950 text-white relative">
         <div className="absolute inset-0 bg-blue-600/5 pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="flex flex-col md:flex-row items-center gap-20">
-            <div className="md:w-1/2 grid grid-cols-2 gap-6">
-              <div className="aspect-[3/4] rounded-[2.5rem] overflow-hidden border-8 border-white/5 shadow-2xl relative group">
-                 <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1200" alt="Isaac Ademola" className="w-full h-full object-cover grayscale transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-110"/>
-                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent" />
+          <div className="flex flex-col md:flex-row items-center gap-16 lg:gap-20">
+            <div className="w-full md:w-5/12 max-w-md">
+              <div className="aspect-[4/5] rounded-[2.5rem] overflow-hidden border-8 border-white/5 shadow-2xl relative group">
+                 <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1200" alt="Isaac Ademola" className="w-full h-full object-cover grayscale transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-105"/>
+                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
                  <div className="absolute bottom-6 left-6">
-                    <div className="text-xl font-black tracking-tighter">ISAAC ADEMOLA</div>
-                    <div className="text-[8px] font-black uppercase tracking-[0.4em] text-blue-400">FOUNDER</div>
-                 </div>
-              </div>
-              <div className="aspect-[3/4] rounded-[2.5rem] overflow-hidden border-8 border-white/5 shadow-2xl relative group">
-                 <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=1200" alt="Fawaz Olayinka" className="w-full h-full object-cover grayscale transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-110"/>
-                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 to-transparent" />
-                 <div className="absolute bottom-6 left-6">
-                    <div className="text-xl font-black tracking-tighter text-white">FAWAZ OLAYINKA</div>
-                    <div className="text-[8px] font-black uppercase tracking-[0.4em] text-blue-400">CO-FOUNDER</div>
+                    <div className="text-2xl font-black tracking-tighter">ISAAC ADEMOLA</div>
+                    <div className="text-[9px] font-black uppercase tracking-[0.4em] text-blue-400">FOUNDER & CHIEF ARCHITECT</div>
                  </div>
               </div>
             </div>
-            <div className="md:w-1/2 text-center md:text-left">
-              <Quote className="text-blue-600 mb-10 mx-auto md:mx-0" size={64} />
-              <h2 className="text-3xl md:text-5xl font-black mb-10 leading-[1.1] tracking-tighter">"Every professional deserves a <span className="text-blue-500">voice</span> that commands respect."</h2>
-              <p className="text-slate-300 text-lg md:text-xl mb-12 leading-relaxed italic font-medium">"Your value shouldn't be trapped in a document. We set your narrative free and align it with market reality."</p>
+            <div className="w-full md:w-7/12 text-center md:text-left">
+              <Quote className="text-blue-600 mb-8 mx-auto md:mx-0" size={56} />
+              <h2 className="text-3xl md:text-5xl font-black mb-8 leading-[1.1] tracking-tighter">"Every professional deserves a <span className="text-blue-500">voice</span> that commands respect."</h2>
+              <p className="text-slate-300 text-lg md:text-xl mb-10 leading-relaxed italic font-medium">"Your value shouldn't be trapped in a document. We set your narrative free and align it with market reality."</p>
               <a href="#/founder" className="bg-white text-slate-950 px-10 py-5 rounded-2xl font-black text-lg hover:bg-slate-50 transition shadow-xl inline-flex items-center space-x-3 active:scale-95">
-                <span>Meet the Architects</span>
+                <span>Meet the Founder</span>
                 <ChevronRight size={20} />
               </a>
             </div>

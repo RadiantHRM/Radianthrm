@@ -2,11 +2,14 @@ import React from 'react';
 import { BlogPost } from './types';
 
 export const COLORS = {
-  CHARCOAL: '#0F172A',
-  RADIANT_BLUE: '#2563EB',
+  NAVY_PRIMARY: '#071933',
+  NAVY_DEEP: '#040D1B',
+  COBALT_ACCENT: '#1D4ED8',
+  BLUE_VIBRANT: '#2563EB',
   WHITE: '#FFFFFF',
+  ICE_BLUE: '#F0F6FF',
   GRAY_LIGHT: '#F8FAFC',
-  TEXT_PRIMARY: '#0F172A',
+  TEXT_PRIMARY: '#071933',
   TEXT_SECONDARY: '#475569',
 };
 
@@ -50,42 +53,81 @@ export const TXT = {
 };
 
 export const CONTACT_INFO = {
-  email: 'isaac@radianthrm.com',
+  email: 'hello@hireableco.com',
   whatsapp: '+18382663258',
-  instagram: '@radianthrm',
+  instagram: '@hireable.co',
   whatsappLink: 'https://wa.me/18382663258'
 };
 
-export const RadiantLogo = ({ className = "h-8 md:h-10", iconOnly = false, dark = false }) => (
-  <div className={`flex items-center gap-3 ${className}`}>
+export const HireableLogo = ({ className = "h-8 md:h-10", iconOnly = false, dark = false }: { className?: string; iconOnly?: boolean; dark?: boolean }) => (
+  <div className={`flex items-center gap-3.5 ${className}`}>
+    {/* Architectural H-Door Emblem */}
     <div className="relative h-full aspect-square flex-shrink-0 group">
-      <div className="absolute inset-0 bg-blue-600/20 blur-lg rounded-lg group-hover:bg-blue-600/30 transition-all duration-700"></div>
+      <div className={`absolute inset-0 ${dark ? 'bg-blue-400/20' : 'bg-[#071933]/15'} blur-md rounded-lg group-hover:scale-110 transition-all duration-700`}></div>
       <svg 
-        viewBox="0 0 100 100" 
-        className="w-full h-full relative z-10 drop-shadow-lg" 
+        viewBox="0 0 200 200" 
+        className="w-full h-full relative z-10 drop-shadow-sm transition-transform duration-300 group-hover:scale-105" 
         fill="none" 
         xmlns="http://www.w3.org/2000/svg"
       >
-        <defs>
-          <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stopColor="#3B82F6" />
-            <stop offset="100%" stopColor="#1E40AF" />
-          </linearGradient>
-        </defs>
-        <path d="M50 5L89.5 27.5V72.5L50 95L10.5 72.5V27.5L50 5Z" fill="url(#logoGrad)"/>
-        <path d="M35 30H55C60.5228 30 65 34.4772 65 40C65 45.5228 60.5228 50 55 50H35V30Z" stroke="white" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M35 30V70" stroke="white" strokeWidth="8" strokeLinecap="round" />
-        <path d="M48 50L68 72" stroke="white" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" />
-        <path d="M75 15L80 20M85 15L80 20M80 25L80 20" stroke="white" strokeWidth="4" strokeLinecap="round" className="animate-pulse"/>
+        {/* Left Column with Sloped Top */}
+        <path 
+          d="M 22 28 L 72 52 V 178 H 22 Z" 
+          fill={dark ? "#FFFFFF" : "#071933"} 
+        />
+        
+        {/* Crossbar */}
+        <path 
+          d="M 72 82 H 128 V 108 H 72 Z" 
+          fill={dark ? "#FFFFFF" : "#071933"} 
+        />
+        
+        {/* Right Column with Sloped Top */}
+        <path 
+          d="M 128 52 L 178 28 V 178 H 128 Z" 
+          fill={dark ? "#FFFFFF" : "#071933"} 
+        />
+        
+        {/* Open Door Perspective Panel (Entering opportunity) */}
+        <path 
+          d="M 76 112 L 98 122 V 178 L 76 174 Z" 
+          fill={dark ? "#60A5FA" : "#0A254C"} 
+        />
+        {/* Door 3D edge thickness highlight */}
+        <path 
+          d="M 98 122 L 101 123 V 178 L 98 178 Z" 
+          fill={dark ? "#93C5FD" : "#1B3B6F"} 
+        />
       </svg>
     </div>
+
+    {/* Wordmark */}
     {!iconOnly && (
-      <span className={`text-lg md:text-xl font-black tracking-tighter uppercase whitespace-nowrap ${dark ? 'text-white' : 'text-slate-950'}`}>
-        Radiant<span className="text-blue-600">HRM</span>
-      </span>
+      <div className="flex flex-col justify-center leading-none select-none">
+        <div className={`flex items-center tracking-[0.26em] text-sm md:text-base font-black uppercase font-sans ${dark ? 'text-white' : 'text-[#071933]'}`}>
+          <span>HIRE</span>
+          {/* Custom Apex Λ for A */}
+          <span className="inline-block mx-[0.02em] font-extrabold transform scale-y-105">
+            <svg viewBox="0 0 20 22" className={`w-[0.72em] h-[0.78em] inline-block ${dark ? 'fill-white' : 'fill-[#071933]'}`} style={{ verticalAlign: '-0.02em' }}>
+              <path d="M 10 1 L 19 21 H 14.5 L 10 8.5 L 5.5 21 H 1 Z" />
+            </svg>
+          </span>
+          <span>BLE</span>
+        </div>
+        <div className="flex items-center justify-center gap-1.5 mt-0.5">
+          <span className={`h-[1px] w-3 md:w-4 ${dark ? 'bg-white/40' : 'bg-[#071933]/40'}`}></span>
+          <span className={`text-[7px] md:text-[8px] font-black uppercase tracking-[0.35em] pl-0.5 ${dark ? 'text-slate-300' : 'text-[#071933]/80'}`}>
+            CO.
+          </span>
+          <span className={`h-[1px] w-3 md:w-4 ${dark ? 'bg-white/40' : 'bg-[#071933]/40'}`}></span>
+        </div>
+      </div>
     )}
   </div>
 );
+
+// Backward-compatibility export
+export const RadiantLogo = HireableLogo;
 
 const ATSResumeIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="group">
@@ -143,7 +185,7 @@ export const TESTIMONIALS = [
     id: '2',
     name: 'Michael Chen',
     role: 'Director of Engineering',
-    content: 'Radianthrm transformed my resume from a simple list of tasks into a high-impact narrative of achievements.',
+    content: 'Hireable Co. transformed my resume from a simple list of tasks into a high-impact narrative of achievements.',
     image: 'https://picsum.photos/seed/michael/150/150',
     salaryIncrease: '+$30k'
   },
@@ -159,7 +201,7 @@ export const TESTIMONIALS = [
     id: '4',
     name: 'Dr. Elena Vance',
     role: 'Chief Nursing Officer',
-    content: 'Transitioning from clinical to executive healthcare leadership felt impossible. Radianthrm re-mapped my nursing background into a high-authority operational narrative.',
+    content: 'Transitioning from clinical to executive healthcare leadership felt impossible. Hireable Co. re-mapped my nursing background into a high-authority operational narrative.',
     image: 'https://picsum.photos/seed/elena/150/150',
     salaryIncrease: '+$40k'
   },
@@ -183,7 +225,7 @@ export const TESTIMONIALS = [
     id: '7',
     name: 'Jessica Wu',
     role: 'Creative Director',
-    content: 'Most resume writers don\'t understand the creative industry. Radianthrm balanced my visual portfolio with a data-driven impact narrative that justified my Senior title.',
+    content: 'Most resume writers don\'t understand the creative industry. Hireable Co. balanced my visual portfolio with a data-driven impact narrative that justified my Senior title.',
     image: 'https://picsum.photos/seed/jwu/150/150',
     salaryIncrease: '+25%'
   },
@@ -199,7 +241,7 @@ export const TESTIMONIALS = [
     id: '9',
     name: 'James O’Connor',
     role: 'Supply Chain Director',
-    content: 'Radianthrm understood the complexity of global logistics. They turned my technical oversight into a leadership story of efficiency and revenue protection.',
+    content: 'Hireable Co. understood the complexity of global logistics. They turned my technical oversight into a leadership story of efficiency and revenue protection.',
     image: 'https://picsum.photos/seed/james/150/150',
     salaryIncrease: '+$32k'
   },

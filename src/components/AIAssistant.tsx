@@ -20,7 +20,7 @@ interface Message {
 const AIAssistant: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { role: 'model', text: "Hello 👋, I am your Senior Career Strategist at Radianthrm. How can I help you engineer your professional narrative today?" }
+    { role: 'model', text: "Hello 👋, I am your Senior Career Strategist at Hireable Co. How can I help you engineer your professional narrative today?" }
   ]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -124,11 +124,11 @@ const AIAssistant: React.FC = () => {
         model: 'gemini-3-flash-preview',
         contents: [...history, { role: 'user', parts: [{ text: messageText }] }],
         config: {
-          systemInstruction: `You are Radianthrm's Senior AI Career Strategist, inspired by elite forensic intelligence. 
+          systemInstruction: `You are Hireable Co.'s Senior AI Career Strategist, inspired by elite forensic intelligence. 
           
           CORE KNOWLEDGE BASE:
-          - BRAND: Radianthrm Collective, led by Founding Architect Isaac Ademola.
-          - VISION: Branding is the bridge between identity and capital.
+          - BRAND: Hireable Co., led by Founding Architect Isaac Ademola.
+          - VISION: Executive Career Architecture & Placement. Branding is the bridge between identity and capital.
           - SERVICE 1 (ATS Resumes): Forensic keyword mapping. Tiers: Kickstart ($99), Professional Pivot ($189), Executive Authority ($349).
           - SERVICE 2 (VIP Reverse Recruiting): "Done-for-you" job search. Sourcing hidden roles.
           - PHILOSOPHY: We engineer "Business Cases" that justify high salaries.
@@ -178,12 +178,12 @@ const AIAssistant: React.FC = () => {
       {/* Launcher Button */}
       <button
         onClick={toggleOpen}
-        className={`w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-[0_15px_50px_-10px_rgba(37,99,235,0.5)] transition-all duration-500 hover:scale-110 active:scale-95 group relative ${
-          isOpen ? 'bg-slate-900 text-white' : 'bg-blue-600 text-white'
+        className={`w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center shadow-[0_15px_50px_-10px_rgba(7,25,51,0.5)] transition-all duration-500 hover:scale-110 active:scale-95 group relative ${
+          isOpen ? 'bg-[#071933] text-white' : 'bg-[#071933] text-white hover:bg-[#0A254C]'
         }`}
       >
-        <div className="absolute inset-0 rounded-full bg-blue-400 animate-ping opacity-20" />
-        {isOpen ? <X size={28} /> : <MessageCircle size={28} className="relative z-10" />}
+        <div className="absolute inset-0 rounded-full bg-blue-500 animate-ping opacity-20" />
+        {isOpen ? <X size={28} /> : <MessageCircle size={28} className="relative z-10 text-white" />}
       </button>
 
       {/* Chat Window */}
@@ -191,13 +191,13 @@ const AIAssistant: React.FC = () => {
         isOpen ? 'scale-100 opacity-100 translate-y-0' : 'scale-75 opacity-0 translate-y-10 pointer-events-none'
       }`}>
         {/* Header */}
-        <div className="bg-slate-950 p-6 text-white flex items-center justify-between border-b border-white/5">
+        <div className="bg-[#050E1A] p-6 text-white flex items-center justify-between border-b border-white/5">
           <div className="flex items-center space-x-4">
             <div className="relative">
-              <div className="w-12 h-12 bg-blue-600 rounded-2xl flex items-center justify-center shadow-lg">
+              <div className="w-12 h-12 bg-[#1D4ED8] rounded-2xl flex items-center justify-center shadow-lg">
                 <ShieldCheck size={24} />
               </div>
-              <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 border-2 border-slate-950 rounded-full animate-pulse" />
+              <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-500 border-2 border-[#050E1A] rounded-full animate-pulse" />
             </div>
             <div>
               <h3 className="font-black text-lg tracking-tight">Sasha • AI Agent</h3>
@@ -221,8 +221,8 @@ const AIAssistant: React.FC = () => {
             <div key={i} className={`flex flex-col ${m.role === 'user' ? 'items-end' : 'items-start'} animate-in fade-in slide-in-from-bottom-2 duration-300`}>
               {m.role === 'model' && (
                 <div className="flex items-center space-x-2 mb-2 ml-2">
-                  <div className="w-5 h-5 bg-slate-900 rounded-lg flex items-center justify-center text-[8px] font-black text-white">R</div>
-                  <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">Radianthrm Strategist</span>
+                  <div className="w-5 h-5 bg-[#071933] rounded-lg flex items-center justify-center text-[8px] font-black text-white">H</div>
+                  <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">Hireable Co. Strategist</span>
                 </div>
               )}
               

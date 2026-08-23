@@ -111,8 +111,8 @@ const Support: React.FC = () => {
                     <Mail className="text-blue-400 mb-8" size={40} />
                     <h4 className="text-2xl font-black mb-4 tracking-tight">Strategic Email</h4>
                     <p className="text-slate-400 font-medium mb-8">Direct line to our executive support team.</p>
-                    <a href="mailto:support@radianthrm.com" className="text-blue-400 font-black uppercase tracking-widest text-xs flex items-center group-hover:translate-x-2 transition-transform">
-                       support@radianthrm.com <ArrowRight size={14} className="ml-2" />
+                    <a href="mailto:support@hireableco.com" className="text-blue-400 font-black uppercase tracking-widest text-xs flex items-center group-hover:translate-x-2 transition-transform">
+                       support@hireableco.com <ArrowRight size={14} className="ml-2" />
                     </a>
                  </div>
                  <div className="bg-white p-10 rounded-[3rem] border border-slate-100 group hover:-translate-y-2 transition-all duration-500 shadow-xl">

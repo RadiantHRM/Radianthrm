@@ -1,9 +1,12 @@
 {
-  "name": "Radiant HRM",
-  "description": "Global Career Architects. Forensic career architecting for high-authority executive placements.",
+  "name": "Hireable Co.",
+  "description": "Executive Career Architecture & Forensic Placement. We engineer high-authority career narratives and market positioning.",
   "requestFramePermissions": [
     "camera",
     "microphone",
     "geolocation"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
   ]
 }
