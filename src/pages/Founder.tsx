@@ -49,9 +49,9 @@ const Founder: React.FC = () => {
             <div className="w-full lg:w-5/12 relative group">
               <div className="absolute -inset-4 bg-blue-600/10 rounded-[3rem] -rotate-2 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
               <div className="relative overflow-hidden rounded-[2.5rem] shadow-2xl border-8 border-white aspect-[4/5]">
-                <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1200" 
-                  alt="Isaac Ademola" 
+                <img
+                  src="/images/isaac-ademola.png"
+                  alt="Isaac Ademola"
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
                 />
               </div>

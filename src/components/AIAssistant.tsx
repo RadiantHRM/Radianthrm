@@ -182,7 +182,6 @@ const AIAssistant: React.FC = () => {
           isOpen ? 'bg-[#071933] text-white' : 'bg-[#071933] text-white hover:bg-[#0A254C]'
         }`}
       >
-        <div className="absolute inset-0 rounded-full bg-blue-500 animate-ping opacity-20" />
         {isOpen ? <X size={28} /> : <MessageCircle size={28} className="relative z-10 text-white" />}
       </button>
 

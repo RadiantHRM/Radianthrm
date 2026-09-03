@@ -306,7 +306,7 @@ const Home: React.FC = () => {
           <div className="flex flex-col md:flex-row items-center gap-16 lg:gap-20">
             <div className="w-full md:w-5/12 max-w-md">
               <div className="aspect-[4/5] rounded-[2.5rem] overflow-hidden border-8 border-white/5 shadow-2xl relative group">
-                 <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1200" alt="Isaac Ademola" className="w-full h-full object-cover grayscale transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-105"/>
+                 <img src="/images/isaac-ademola.png" alt="Isaac Ademola" className="w-full h-full object-cover grayscale transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-105"/>
                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
                  <div className="absolute bottom-6 left-6">
                     <div className="text-2xl font-black tracking-tighter">ISAAC ADEMOLA</div>
