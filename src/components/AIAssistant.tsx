@@ -57,7 +57,7 @@ const AIAssistant: React.FC = () => {
     { label: "ATS Resume Audit", action: "How does your ATS Forensic Audit work?" },
     { label: "VIP Recruiting", action: "Tell me about the 'Done-For-You' VIP Recruiting." },
     { label: "Pricing Plans", action: "What are your service tiers and pricing?" },
-    { label: "Talk to Isaac", action: "I want to speak with Isaac Ademola directly." },
+    { label: "Talk to Isaac", action: "I want to speak with Boluwatife Isaac Ademola directly." },
     { label: "Success Stories", action: "Can you share some recent client results?" },
     { label: "Career Pivot", action: "How do you help with industry pivots?" }
   ];
@@ -127,7 +127,7 @@ const AIAssistant: React.FC = () => {
           systemInstruction: `You are Hireable Co.'s Senior AI Career Strategist, inspired by elite forensic intelligence. 
           
           CORE KNOWLEDGE BASE:
-          - BRAND: Hireable Co., led by Founding Architect Isaac Ademola.
+          - BRAND: Hireable Co., led by Founding Architect Boluwatife Isaac Ademola.
           - VISION: Executive Career Architecture & Placement. Branding is the bridge between identity and capital.
           - SERVICE 1 (ATS Resumes): Forensic keyword mapping. Tiers: Kickstart ($99), Professional Pivot ($189), Executive Authority ($349).
           - SERVICE 2 (VIP Reverse Recruiting): "Done-for-you" job search. Sourcing hidden roles.

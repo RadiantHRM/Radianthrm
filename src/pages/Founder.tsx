@@ -44,21 +44,21 @@ const Founder: React.FC = () => {
       <section className="py-20 md:py-36 bg-white">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          {/* Isaac Ademola */}
+          {/* Boluwatife Isaac Ademola */}
           <div className="flex flex-col lg:flex-row items-center gap-16 md:gap-24">
             <div className="w-full lg:w-5/12 relative group">
               <div className="absolute -inset-4 bg-blue-600/10 rounded-[3rem] -rotate-2 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
               <div className="relative overflow-hidden rounded-[2.5rem] shadow-2xl border-8 border-white aspect-[4/5]">
                 <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1200" 
-                  alt="Isaac Ademola" 
+                  src="/images/founder.jpg" 
+                  alt="Boluwatife Isaac Ademola" 
                   className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
                 />
               </div>
             </div>
             <div className="w-full lg:w-7/12 space-y-8">
               <div>
-                <h2 className="text-5xl md:text-7xl font-black text-slate-950 tracking-tighter mb-2">Isaac Ademola</h2>
+                <h2 className="text-5xl md:text-7xl font-black text-slate-950 tracking-tighter mb-2">Boluwatife Isaac Ademola</h2>
                 <div className="text-slate-400 text-lg md:text-xl font-medium italic mb-3">10+ years executive search veteran. Strategic placement specialist.</div>
                 <div className="text-blue-600 text-xs md:text-sm font-black uppercase tracking-[0.4em]">Founder & Chief Architect</div>
               </div>
