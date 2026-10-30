@@ -10,6 +10,7 @@ import Dashboard from './pages/Dashboard.tsx';
 import Login from './pages/Login.tsx';
 import ATSScanner from './pages/ATSScanner.tsx';
 import Founder from './pages/Founder.tsx';
+import About from './pages/About.tsx';
 import Policy from './pages/Policy.tsx';
 import Portfolio from './pages/Portfolio.tsx';
 import Support from './pages/Support.tsx'; // Import Support Page
@@ -79,6 +80,7 @@ const App: React.FC = () => {
     if (baseRoute === '#/contact') return <Contact />;
     if (baseRoute === '#/scanner') return <ATSScanner />;
     if (baseRoute === '#/founder') return <Founder />;
+    if (baseRoute === '#/about') return <About />;
     if (baseRoute === '#/portfolio') return <Portfolio />;
     if (baseRoute === '#/support') return <Support />; // Render Support Page
     if (baseRoute.startsWith('#/policy')) return <Policy />;

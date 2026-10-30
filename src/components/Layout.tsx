@@ -35,6 +35,7 @@ const Layout: React.FC<LayoutProps> = ({ children, user, onLogout }) => {
 
   const navLinks = [
     { label: 'Home', href: '#/' },
+    { label: 'About', href: '#/about' },
     { label: 'Portfolio', href: '#/portfolio' },
     { label: 'ATS Scanner', href: '#/scanner' },
     { label: 'Resume', href: '#/resume-services' },
@@ -54,7 +55,7 @@ const Layout: React.FC<LayoutProps> = ({ children, user, onLogout }) => {
               <HireableLogo className="h-9 md:h-11" />
             </a>
 
-            <nav className="hidden lg:flex items-center space-x-8">
+            <nav className="hidden lg:flex items-center space-x-5 xl:space-x-8">
               {navLinks.map((link) => (
                 <a 
                   key={link.href} 
@@ -132,6 +133,7 @@ const Layout: React.FC<LayoutProps> = ({ children, user, onLogout }) => {
             <div className="lg:col-span-2">
               <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-blue-400 mb-8">SERVICE SUITE</h4>
               <ul className="space-y-4">
+                <li><a href="#/about" className="text-slate-300 hover:text-white transition-colors text-base font-bold">About Us</a></li>
                 <li><a href="#/portfolio" className="text-slate-300 hover:text-white transition-colors text-base font-bold">Forensic Portfolio</a></li>
                 <li><a href="#/resume-services" className="text-slate-300 hover:text-white transition-colors text-base font-bold">Resume Engineering</a></li>
                 <li><a href="#/reverse-recruiting" className="text-slate-300 hover:text-white transition-colors text-base font-bold">VIP Recruiting</a></li>
