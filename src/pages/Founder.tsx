@@ -75,8 +75,8 @@ const Founder: React.FC = () => {
               </div>
               <div className="flex items-center space-x-4 pt-6">
                 <a href="mailto:hello@hireableco.com" className="p-4 bg-slate-950 text-white rounded-2xl hover:bg-blue-600 transition-all shadow-lg"><Mail size={24} /></a>
-                <a href="#" className="p-4 bg-slate-100 text-slate-600 rounded-2xl hover:bg-slate-200 transition-all"><Linkedin size={24} /></a>
-                <a href="#" className="p-4 bg-slate-100 text-slate-600 rounded-2xl hover:bg-slate-200 transition-all"><Twitter size={24} /></a>
+                <a href="https://www.linkedin.com/in/isaac-hireableco" target="_blank" rel="noopener noreferrer" aria-label="Isaac on LinkedIn" className="p-4 bg-slate-100 text-slate-600 rounded-2xl hover:bg-slate-200 transition-all"><Linkedin size={24} /></a>
+                <a href="https://x.com/bolu_talent_co?s=11" target="_blank" rel="noopener noreferrer" aria-label="Isaac on X" className="p-4 bg-slate-100 text-slate-600 rounded-2xl hover:bg-slate-200 transition-all"><Twitter size={24} /></a>
               </div>
             </div>
           </div>
